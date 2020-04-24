@@ -9,15 +9,17 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief Statistic function headers
  *
- * <Add Extended Description Here>
+ * Definition of statistic functions to find maximum, minimum, median or mean
+ * values and print the results.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author David Marcos
+ * @date 24/04/2020
  *
  */
+
 #ifndef __STATS_H__
 #define __STATS_H__
 
@@ -26,111 +28,95 @@
 void print_statistics(uint8_t min, uint8_t max, float mean, float median);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Print statistic data
  *
- * <Add Extended Description Here>
+ * Print the minimum, maximum, mean and median values.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param min		: Minimum value
+ * @param max		: Maximum value
+ * @param mean		: Mean value
+ * @param median	: Median value
  *
- * @return <Add Return Informaiton here>
+ * @return NULL
  */
 
 void print_array(uint8_t* array, uint8_t len);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Print 1D the array
  *
- * <Add Extended Description Here>
+ * Print N elements of one-dimensional array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param array		: Pointer of the array with the data
+ * @param len		: Length of the array or N elements to be printed
  *
- * @return <Add Return Informaiton here>
+ * @return NULL
  */
 
 float find_median(uint8_t* array, uint8_t len);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find median value
  *
- * <Add Extended Description Here>
+ * Find median value of the input array.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param array		: Pointer of the array with the data
+ * @param len		: Length of the array
  *
- * @return <Add Return Informaiton here>
+ * @return Median	: Median value (float type)
  */
 
 float find_mean(uint8_t* array, uint8_t len);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find mean value
  *
- * <Add Extended Description Here>
+ * Find mean value of the input array.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param array		: Pointer of the array with the data
+ * @param len		: Length of the array
  *
- * @return <Add Return Informaiton here>
+ * @return Median	: Mean value (float type)
  */
 
 uint8_t find_maximum(uint8_t* array, uint8_t len);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find maximum value
  *
- * <Add Extended Description Here>
+ * It returns the maximum value of the input array.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param array		: Pointer of the array with the data
+ * @param len		: Length of the array
  *
- * @return <Add Return Informaiton here>
+ * @return Median	: Maximum value (unsigned 8 bit type)
  */
 
 uint8_t find_minimum(uint8_t* array, uint8_t len);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find minimum value
  *
- * <Add Extended Description Here>
+ * It returns the minimum value of the input array.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param array		: Pointer of the array with the data
+ * @param len		: Length of the array
  *
- * @return <Add Return Informaiton here>
+ * @return Median	: Minimum value (unsigned 8 bit type)
  */
 
 void sort_array(uint8_t* array, uint8_t len);
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Sort array decreasing order
  *
- * <Add Extended Description Here>
+ * Sort the array in decreasing order using the Bubble Sort algorithm. The
+ * array to be sorted is passed as a pointer.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param array		: Pointer of the array to be sorted
+ * @param len		: Length of the array
  *
- * @return <Add Return Informaiton here>
+ * @return NULL
  */
-
-#endif /* __STATS_H__ */
-
-
-
 
 #endif /* __STATS_H__ */

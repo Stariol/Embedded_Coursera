@@ -9,13 +9,14 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Statistic functions
  *
- * <Add Extended Description Here>
+ * Definition of statistic functions to find maximum, minimum, median or mean
+ * values and print the results.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author David Marcos
+ * @date 24/04/2020
  *
  */
 
@@ -42,29 +43,95 @@ void main() {
 /* Add other Implementation File Code Here */
 
 void print_statistics(uint8_t min, uint8_t max, float mean, float median) {
-
+	printf("\nminimum = %u", min);
+	printf("\nmaximum = %u", max);
+	printf("\nmean = %.3f", mean);
+	printf("\nmedian = %.3f\n", median);
 }
 
 void print_array(uint8_t* array, uint8_t len) {
-
+	uint8_t i = 0;
+	printf("\n%u", array[0]);
+	for(i = 1; i < len; i++){
+		printf(", %u",array[i]);
+	}
+	printf("]\n");
 }
 
 float find_median(uint8_t* array, uint8_t len) {
-
+	uint8_t sorted_array[len];
+	float median;
+	uint8_t i;
+	if(len < 1) {
+		return 0;
+	}
+	for(i = 0; i < len; i++) {
+		sorted_array[i] = array[i];
+	}
+	sort_array(sorted_array, len);
+	if(len%2>0){
+		median = (float)sorted_array[(len+1)/2-1];
+	} else {
+		median = ((float)sorted_array[len/2-1]+(float)sorted_array[len/2])/2;
+	}
+	return median;
 }
 
 float find_mean(uint8_t* array, uint8_t len) {
-
+	uint8_t sorted_array[len];
+	float mean = 0;
+	uint8_t i = 0;
+	if(len < 1) {
+		return 0;
+	}
+	for(i = 0; i < len; i++) {
+		mean += (float)array[i];
+	}
+	mean = mean/((float)len);
+	return mean;
 }
 
 uint8_t find_maximum(uint8_t* array, uint8_t len) {
-
+	uint8_t max;
+	uint8_t i = 0;
+	if(len < 1) {
+		return 0;
+	}
+	max = array[0];
+	for(i = 0; i < len; i++) {
+		if(max < array[i]){
+			max = array[i];
+		}
+	}
+	return max;
 }
 
 uint8_t find_minimum(uint8_t* array, uint8_t len) {
-
+	uint8_t min;
+	uint8_t i = 0;
+	if(len < 1) {
+		return 0;
+	}
+	min = array[0];
+	for(i = 0; i < len; i++) {
+		if(min > array[i]){
+			min = array[i];
+		}
+	}
+	return min;
 }
 
 void sort_array(uint8_t* array, uint8_t len) {
-
+	uint8_t temp = 0;
+	uint8_t i = 0;
+	uint8_t j = 0;
+	for(i = 0; i < len; i++){
+		for(j = (len-1); j > i; j--){
+			if(array[j-1] < array[j]){
+				temp = array[j-1];
+				array[j-1] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
 }
