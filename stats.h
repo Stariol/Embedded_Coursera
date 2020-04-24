@@ -25,8 +25,6 @@
 
 /* Add Your Declarations and Function Comments here */ 
 
-void print_statistics(uint8_t min, uint8_t max, float mean, float median);
-
 /**
  * @brief Print statistic data
  *
@@ -40,7 +38,7 @@ void print_statistics(uint8_t min, uint8_t max, float mean, float median);
  * @return NULL
  */
 
-void print_array(uint8_t* array, uint8_t len);
+void print_statistics(uint8_t min, uint8_t max, float mean, float median);
 
 /**
  * @brief Print 1D the array
@@ -53,7 +51,7 @@ void print_array(uint8_t* array, uint8_t len);
  * @return NULL
  */
 
-float find_median(uint8_t* array, uint8_t len);
+void print_array(uint8_t* array, uint8_t len);
 
 /**
  * @brief Find median value
@@ -66,7 +64,7 @@ float find_median(uint8_t* array, uint8_t len);
  * @return Median	: Median value (float type)
  */
 
-float find_mean(uint8_t* array, uint8_t len);
+float find_median(uint8_t* array, uint8_t len);
 
 /**
  * @brief Find mean value
@@ -79,7 +77,7 @@ float find_mean(uint8_t* array, uint8_t len);
  * @return Median	: Mean value (float type)
  */
 
-uint8_t find_maximum(uint8_t* array, uint8_t len);
+float find_mean(uint8_t* array, uint8_t len);
 
 /**
  * @brief Find maximum value
@@ -92,7 +90,7 @@ uint8_t find_maximum(uint8_t* array, uint8_t len);
  * @return Median	: Maximum value (unsigned 8 bit type)
  */
 
-uint8_t find_minimum(uint8_t* array, uint8_t len);
+uint8_t find_maximum(uint8_t* array, uint8_t len);
 
 /**
  * @brief Find minimum value
@@ -105,7 +103,7 @@ uint8_t find_minimum(uint8_t* array, uint8_t len);
  * @return Median	: Minimum value (unsigned 8 bit type)
  */
 
-void sort_array(uint8_t* array, uint8_t len);
+uint8_t find_minimum(uint8_t* array, uint8_t len);
 
 /**
  * @brief Sort array decreasing order
@@ -118,5 +116,7 @@ void sort_array(uint8_t* array, uint8_t len);
  *
  * @return NULL
  */
+
+void sort_array(uint8_t* array, uint8_t len);
 
 #endif /* __STATS_H__ */

@@ -21,8 +21,8 @@
  */
 
 #include <stdio.h>
-#include "stats.h"
 #include <stdint.h>
+#include "stats.h"
 
 /* Size of the Data Set */
 #define SIZE (40)
@@ -66,11 +66,8 @@ void main() {
 	print_array(test_ptr, SIZE);
 	printf("\nSorted test array:");
 	print_array(test_sorted_ptr, SIZE);
-	print_statistics(minimum_value, maximum_value, mean_value, median_value); 3, 100,  90};
-
-
-
-
+	print_statistics(minimum_value, maximum_value, mean_value, median_value);
+	printf("\nEnd of program\n\n");
 }
 
 /* Add other Implementation File Code Here */
@@ -84,7 +81,7 @@ void print_statistics(uint8_t min, uint8_t max, float mean, float median) {
 
 void print_array(uint8_t* array, uint8_t len) {
 	uint8_t i = 0;
-	printf("\n%u", array[0]);
+	printf("\n[%u", array[0]);
 	for(i = 1; i < len; i++){
 		printf(", %u",array[i]);
 	}
