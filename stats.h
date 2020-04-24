@@ -23,6 +23,8 @@
 
 /* Add Your Declarations and Function Comments here */ 
 
+void print_statistics(uint8_t min, uint8_t max, float mean, float median);
+
 /**
  * @brief <Add Brief Description of Function Here>
  *
@@ -35,6 +37,100 @@
  *
  * @return <Add Return Informaiton here>
  */
+
+void print_array(uint8_t* array, uint8_t len);
+
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ *
+ * @return <Add Return Informaiton here>
+ */
+
+float find_median(uint8_t* array, uint8_t len);
+
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ *
+ * @return <Add Return Informaiton here>
+ */
+
+float find_mean(uint8_t* array, uint8_t len);
+
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ *
+ * @return <Add Return Informaiton here>
+ */
+
+uint8_t find_maximum(uint8_t* array, uint8_t len);
+
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ *
+ * @return <Add Return Informaiton here>
+ */
+
+uint8_t find_minimum(uint8_t* array, uint8_t len);
+
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ *
+ * @return <Add Return Informaiton here>
+ */
+
+void sort_array(uint8_t* array, uint8_t len);
+
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ *
+ * @return <Add Return Informaiton here>
+ */
+
+#endif /* __STATS_H__ */
+
+
 
 
 #endif /* __STATS_H__ */

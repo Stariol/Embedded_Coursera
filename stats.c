@@ -19,17 +19,16 @@
  *
  */
 
-
-
 #include <stdio.h>
 #include "stats.h"
+#include <stdint.h>
 
 /* Size of the Data Set */
 #define SIZE (40)
 
 void main() {
 
-  unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
+  uint8_t test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
@@ -41,3 +40,31 @@ void main() {
 }
 
 /* Add other Implementation File Code Here */
+
+void print_statistics(uint8_t min, uint8_t max, float mean, float median) {
+
+}
+
+void print_array(uint8_t* array, uint8_t len) {
+
+}
+
+float find_median(uint8_t* array, uint8_t len) {
+
+}
+
+float find_mean(uint8_t* array, uint8_t len) {
+
+}
+
+uint8_t find_maximum(uint8_t* array, uint8_t len) {
+
+}
+
+uint8_t find_minimum(uint8_t* array, uint8_t len) {
+
+}
+
+void sort_array(uint8_t* array, uint8_t len) {
+
+}
