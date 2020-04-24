@@ -29,14 +29,47 @@
 
 void main() {
 
-  uint8_t test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
+	uint8_t test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
+	/* Other Variable Declarations Go Here */
+	
+	uint8_t *test_ptr;
+	uint8_t test_sorted[SIZE];
+	uint8_t *test_sorted_ptr;
+	uint8_t maximum_value = 0;
+	uint8_t minimum_value = 0;
+	uint8_t i = 0;
+	float mean_value = 0;
+	float median_value = 0;
+	
+	/* Statistics and Printing Functions Go Here */
+	
+	for(i = 0; i < SIZE; i++){
+		test_sorted[i] = test[i];	
+	}
+	
+	test_ptr = &test[0];
+	test_sorted_ptr = &test_sorted[0];
+	
+	sort_array(test_sorted_ptr, SIZE);
+	
+	minimum_value = find_minimum(test_ptr, SIZE);
+	maximum_value = find_maximum(test_ptr, SIZE);
+	median_value = find_median(test_ptr, SIZE);
+	mean_value = find_mean(test_ptr, SIZE);
+	
+	printf("\nTest array:");
+	print_array(test_ptr, SIZE);
+	printf("\nSorted test array:");
+	print_array(test_sorted_ptr, SIZE);
+	print_statistics(minimum_value, maximum_value, mean_value, median_value); 3, 100,  90};
+
+
+
 
 }
 
